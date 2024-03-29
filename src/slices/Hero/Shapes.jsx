@@ -25,7 +25,7 @@ export function Shapes() {
                         blur={1}
                         far={9}
                     />
-                    <Environment preset="studio" />
+                    <Environment preset="sunset" />
                 </Suspense>
             </Canvas>
         </div>
@@ -62,9 +62,9 @@ function Geometries() {
     ]
 
     const soundEffects = [
-        new Audio('/sounds/hit2.ogg'),
-        new Audio('/sounds/hit3.ogg'),
-        new Audio('/sounds/hit4.ogg'),
+        new Audio('/sounds/knock1.ogg'),
+        new Audio('/sounds/knock2.ogg'),
+        new Audio('/sounds/knock3.ogg'),
     ]
 
     const materials = [
@@ -88,7 +88,7 @@ function Geometries() {
 
     return geometries.map(({ position, r, geometry }) => (
         <Geometry
-            key={JSON.stringify(position)} // Unique key
+            key={JSON.stringify(position)}
             position={position.map((p) => p * 2)}
             geometry={geometry}
             soundEffects={soundEffects}
