@@ -1,4 +1,5 @@
 import clsx from 'clsx'
+import { ImAirplane } from 'react-icons/im'
 import { PrismicNextLink } from '@prismicio/next'
 import { KeyTextField, LinkField } from '@prismicio/client'
 
@@ -12,7 +13,7 @@ type ButtonProps = {
 export default function Button({
     linkField,
     label,
-    showIcon,
+    showIcon = true,
     className,
 }: ButtonProps) {
     return (
@@ -26,7 +27,7 @@ export default function Button({
             <span className="absolute inset-0 z-0 h-full translate-y-9 bg-yellow-300 transition-transform duration-300 ease-in-out group-hover:translate-y-0"></span>
             <span className="relative flex items-center justify-center gap-2">
                 {' '}
-                {label} {showIcon && '=>'}
+                {label} {showIcon && <ImAirplane />}
             </span>
         </PrismicNextLink>
     )
