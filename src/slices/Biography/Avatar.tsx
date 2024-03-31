@@ -1,11 +1,11 @@
 'use client'
 
 import clsx from 'clsx'
+import gsap from 'gsap'
 
 import { useEffect, useRef } from 'react'
 import { ImageField } from '@prismicio/client'
 import { PrismicNextImage } from '@prismicio/next'
-import gsap from 'gsap'
 
 type AvatarProps = {
     image: ImageField
@@ -41,6 +41,10 @@ export default function Avatar({ image, className }: AvatarProps) {
 
                 let distFromCenter = 1 - Math.abs(componentPercent.x)
 
+                gsap.config({
+                    nullTargetWarn: false,
+                })
+
                 gsap.timeline({
                     defaults: {
                         duration: 0.5,
@@ -52,21 +56,25 @@ export default function Avatar({ image, className }: AvatarProps) {
                         '.avatar',
                         {
                             rotation: gsap.utils.clamp(
-                                -2,
-                                2,
-                                5 * componentPercent.x
+                                -5,
+                                5,
+                                10 * componentPercent.x
                             ),
                             duration: 0.5,
                         },
                         0
                     )
-                    .to('highlight', {
-                        opacity: distFromCenter - 0.7,
-                        x: (-10 + 20) & componentPercent.x,
-                        duration: 0.5,
-                    })
+                    .to(
+                        '.highlight',
+                        {
+                            opacity: distFromCenter - 0.7,
+                            x: (-10 + 20) & componentPercent.x,
+                            duration: 0.5,
+                        },
+                        0
+                    )
             }
-        })
+        }, component)
     }, [])
 
     return (
@@ -76,11 +84,12 @@ export default function Avatar({ image, className }: AvatarProps) {
         >
             <div className="avatar aspect-square overflow-hidden rounded-3xl border-2 border-slate-700 opacity-0f">
                 <PrismicNextImage
+                    alt=""
                     field={image}
                     className="avatar-image h-full w-full object-fill"
                     imgixParams={{ q: 90 }}
                 />
-                <div className="highlight absolute inset-0 hiddenf w-full scale-110 bg-radient-to-tr from-transparen via white to-transparent opacity-0 md:block"></div>
+                <div className="highlight absolute inset-0 hiddenf w-full scale-110 bg-radient-to-tr from-transparen via-white to-transparent opacity-0 md:block"></div>
             </div>
         </div>
     )

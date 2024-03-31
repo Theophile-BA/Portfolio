@@ -1,19 +1,15 @@
 'use client'
+
+import gsap from 'gsap'
+import Bounded from '@/components/Bounded'
+
 import { useEffect, useRef } from 'react'
+import { Shapes } from '@/slices/Hero/Shapes'
 import { Content, KeyTextField } from '@prismicio/client'
 import { SliceComponentProps } from '@prismicio/react'
-import { Shapes } from '@/slices/Hero/Shapes'
-import Bounded from '@/components/Bounded'
-import gsap from 'gsap'
 
-/**
- * Props for `Hero`.
- */
 export type HeroProps = SliceComponentProps<Content.HeroSlice>
 
-/**
- * Component for "Hero" Slices.
- */
 const Hero = ({ slice }: HeroProps): JSX.Element => {
     const component = useRef(null)
 

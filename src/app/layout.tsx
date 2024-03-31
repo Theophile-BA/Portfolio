@@ -21,6 +21,7 @@ export default function RootLayout({
             <body className={montserrat.className}>
                 <Header />
                 {children}
+                <div className="h-[500vh]"></div>
             </body>
         </html>
     )
