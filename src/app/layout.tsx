@@ -2,6 +2,7 @@ import '@/app/css/reset.css'
 import '@/app/css/globals.css'
 
 import Header from '@/components/Header'
+import Footer from '@/components/Footer'
 
 import type { Metadata } from 'next'
 import { montserrat } from '@/font/font'
@@ -20,8 +21,8 @@ export default function RootLayout({
         <html lang="en" className="bg-slate-900 text-slate-100">
             <body className={montserrat.className}>
                 <Header />
+                <Footer />
                 {children}
-                <div className="h-[500vh]"></div>
             </body>
         </html>
     )
