@@ -1,6 +1,6 @@
 import clsx from 'clsx'
 
-import React, { ReactElement } from 'react'
+import React from 'react'
 
 type BoundedProps = {
     as?: React.ElementType

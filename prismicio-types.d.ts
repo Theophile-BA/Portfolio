@@ -381,37 +381,15 @@ interface SettingsDocumentData {
     nav_item: prismic.GroupField<Simplify<SettingsDocumentDataNavItemItem>>
 
     /**
-     * GitHub Link field in *Settings*
+     * Cta Label field in *Settings*
      *
-     * - **Field Type**: Link
+     * - **Field Type**: Text
      * - **Placeholder**: *None*
-     * - **API ID Path**: settings.github_link
+     * - **API ID Path**: settings.cta_label
      * - **Tab**: Main
-     * - **Documentation**: https://prismic.io/docs/field#link-content-relationship
+     * - **Documentation**: https://prismic.io/docs/field#key-text
      */
-    github_link: prismic.LinkField
-
-    /**
-     * Linkedin Link field in *Settings*
-     *
-     * - **Field Type**: Link
-     * - **Placeholder**: *None*
-     * - **API ID Path**: settings.linkedin_link
-     * - **Tab**: Main
-     * - **Documentation**: https://prismic.io/docs/field#link-content-relationship
-     */
-    linkedin_link: prismic.LinkField
-
-    /**
-     * Discord Link field in *Settings*
-     *
-     * - **Field Type**: Link
-     * - **Placeholder**: *None*
-     * - **API ID Path**: settings.discord_link
-     * - **Tab**: Main
-     * - **Documentation**: https://prismic.io/docs/field#link-content-relationship
-     */
-    discord_link: prismic.LinkField
+    cta_label: prismic.KeyTextField
 
     /**
      * Cta Link field in *Settings*
@@ -425,15 +403,37 @@ interface SettingsDocumentData {
     cta_link: prismic.LinkField
 
     /**
-     * Cta Label field in *Settings*
+     * Linkedin Link field in *Settings*
      *
-     * - **Field Type**: Text
+     * - **Field Type**: Link
      * - **Placeholder**: *None*
-     * - **API ID Path**: settings.cta_label
+     * - **API ID Path**: settings.linkedin_link
      * - **Tab**: Main
-     * - **Documentation**: https://prismic.io/docs/field#key-text
+     * - **Documentation**: https://prismic.io/docs/field#link-content-relationship
      */
-    cta_label: prismic.KeyTextField /**
+    linkedin_link: prismic.LinkField
+
+    /**
+     * GitHub Link field in *Settings*
+     *
+     * - **Field Type**: Link
+     * - **Placeholder**: *None*
+     * - **API ID Path**: settings.github_link
+     * - **Tab**: Main
+     * - **Documentation**: https://prismic.io/docs/field#link-content-relationship
+     */
+    github_link: prismic.LinkField
+
+    /**
+     * Discord Link field in *Settings*
+     *
+     * - **Field Type**: Link
+     * - **Placeholder**: *None*
+     * - **API ID Path**: settings.discord_link
+     * - **Tab**: Main
+     * - **Documentation**: https://prismic.io/docs/field#link-content-relationship
+     */
+    discord_link: prismic.LinkField /**
      * Meta Title field in *Settings*
      *
      * - **Field Type**: Text

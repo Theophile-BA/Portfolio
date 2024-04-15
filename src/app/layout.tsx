@@ -21,8 +21,8 @@ export default function RootLayout({
         <html lang="en" className="bg-slate-900 text-slate-100">
             <body className={montserrat.className}>
                 <Header />
-                <Footer />
                 {children}
+                <Footer />
             </body>
         </html>
     )

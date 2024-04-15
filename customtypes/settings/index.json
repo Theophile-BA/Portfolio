@@ -37,10 +37,17 @@
                     }
                 }
             },
-            "github_link": {
+            "cta_label": {
+                "type": "Text",
+                "config": {
+                    "label": "Cta Label",
+                    "placeholder": ""
+                }
+            },
+            "cta_link": {
                 "type": "Link",
                 "config": {
-                    "label": "GitHub Link",
+                    "label": "Cta Link",
                     "placeholder": "",
                     "select": null
                 }
@@ -53,27 +60,20 @@
                     "select": null
                 }
             },
+            "github_link": {
+                "type": "Link",
+                "config": {
+                    "label": "GitHub Link",
+                    "placeholder": "",
+                    "select": null
+                }
+            },
             "discord_link": {
                 "type": "Link",
                 "config": {
                     "label": "Discord Link",
                     "placeholder": "",
                     "select": null
-                }
-            },
-            "cta_link": {
-                "type": "Link",
-                "config": {
-                    "label": "Cta Link",
-                    "placeholder": "",
-                    "select": null
-                }
-            },
-            "cta_label": {
-                "type": "Text",
-                "config": {
-                    "label": "Cta Label",
-                    "placeholder": ""
                 }
             }
         },
