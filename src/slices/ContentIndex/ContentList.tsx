@@ -137,9 +137,13 @@ export default function ContentList({
                         {isFilled.keyText(item.data.title) && (
                             <li
                                 key={index}
-                                className="list-item opacity-0f"
+                                ref={(el) => {
+                                    if (el) {
+                                        itemsRef.current[index] = el
+                                    }
+                                }}
                                 onMouseEnter={() => onMouseEnter(index)}
-                                ref={(el) => (itemsRef.current[index] = el)}
+                                className="list-item opacity-0"
                             >
                                 <Link
                                     href={urlPrefix + '/' + item.uid}

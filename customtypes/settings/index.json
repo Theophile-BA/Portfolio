@@ -37,21 +37,6 @@
                     }
                 }
             },
-            "cta_link": {
-                "type": "Link",
-                "config": {
-                    "label": "CTA Link",
-                    "placeholder": "",
-                    "select": null
-                }
-            },
-            "cta_label": {
-                "type": "Text",
-                "config": {
-                    "label": "CTA Label",
-                    "placeholder": ""
-                }
-            },
             "github_link": {
                 "type": "Link",
                 "config": {
@@ -66,6 +51,29 @@
                     "label": "Linkedin Link",
                     "placeholder": "",
                     "select": null
+                }
+            },
+            "discord_link": {
+                "type": "Link",
+                "config": {
+                    "label": "Discord Link",
+                    "placeholder": "",
+                    "select": null
+                }
+            },
+            "cta_link": {
+                "type": "Link",
+                "config": {
+                    "label": "Cta Link",
+                    "placeholder": "",
+                    "select": null
+                }
+            },
+            "cta_label": {
+                "type": "Text",
+                "config": {
+                    "label": "Cta Label",
+                    "placeholder": ""
                 }
             }
         },
