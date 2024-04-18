@@ -1,6 +1,7 @@
 import '@/app/css/reset.css'
 import '@/app/css/globals.css'
 
+import clsx from 'clsx'
 import Header from '@/components/Header'
 import Footer from '@/components/Footer'
 
@@ -19,10 +20,17 @@ export default function RootLayout({
 }) {
     return (
         <html lang="en" className="bg-slate-900 text-slate-100">
-            <body className={montserrat.className}>
+            <body
+                className={clsx(montserrat.className, 'relative min-h-screen')}
+            >
                 <Header />
                 {children}
                 <Footer />
+                <div className="background-gradient absolute inset-0 -z-50 max-h-screen"></div>
+                <div
+                    className="absolute pointer-events-none inset-0 -z-40 h-full 
+                               bg-[url('/spaceimg.jpg')] opacity-20 mix-blend-soft-light"
+                ></div>
             </body>
         </html>
     )
