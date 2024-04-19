@@ -82,14 +82,14 @@ export default function Avatar({ image, className }: AvatarProps) {
             ref={component}
             className={clsx('relative h-full w-full', className)}
         >
-            <div className="avatar aspect-square overflow-hidden rounded-3xl border-2 border-slate-700 opacity-0f">
+            <div className="avatar opacity-0f aspect-square overflow-hidden rounded-3xl border-2 border-slate-700">
                 <PrismicNextImage
                     alt=""
                     field={image}
                     className="avatar-image h-full w-full object-fill"
                     imgixParams={{ q: 90 }}
                 />
-                <div className="highlight absolute inset-0 hiddenf w-full scale-110 bg-radient-to-tr from-transparen via-white to-transparent opacity-0 md:block"></div>
+                <div className="highlight hiddenf bg-radient-to-tr from-transparen absolute inset-0 w-full scale-110 via-white to-transparent opacity-0 md:block"></div>
             </div>
         </div>
     )

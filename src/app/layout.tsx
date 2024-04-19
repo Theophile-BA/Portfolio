@@ -28,7 +28,7 @@ export default function RootLayout({
                 <Footer />
                 <div className="background-gradient absolute inset-0 -z-50 max-h-screen"></div>
                 <div
-                    className="absolute pointer-events-none inset-0 -z-40 h-full 
+                    className="pointer-events-none absolute inset-0 -z-40 h-full 
                                bg-[url('/spaceimg.jpg')] opacity-20 mix-blend-soft-light"
                 ></div>
             </body>

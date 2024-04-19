@@ -32,7 +32,7 @@ export default function ContentList({
 
     const lastMousePos = useRef({ x: 0, y: 0 })
 
-    const urlPrefix = contentType === 'Blog' ? '/blog' : '/project'
+    const urlPrefix = contentType === 'Blog' ? '/blog' : '/projects'
 
     useEffect(() => {
         let ctx = gsap.context(() => {
@@ -154,15 +154,15 @@ export default function ContentList({
                                         <span className="text-3xl font-bold">
                                             {item.data.title}
                                         </span>
-                                        <div className="flex gap-3 text-yellow-400 text-lg font-bold">
+                                        <div className="flex gap-3 text-lg font-bold text-yellow-400">
                                             {item.tags.map((tag, index) => (
                                                 <span key={index}>{tag}</span>
                                             ))}
                                         </div>
                                     </div>
-                                    <span className="ml-auto flex item-center gap-2 text-xl font-medium md:ml-0">
+                                    <span className="item-center ml-auto flex gap-2 text-xl font-medium md:ml-0">
                                         {viewMoreText}
-                                        <FaBookOpen className="text-yellow-500 mt-[6px]" />
+                                        <FaBookOpen className="mt-[6px] text-yellow-500" />
                                     </span>
                                 </Link>
                             </li>
@@ -171,8 +171,8 @@ export default function ContentList({
                 ))}
             </ul>
             <div
-                className="hover-reveal pointer-events-none absolute left-0 top-0 -z-10 h-[320px] w-[220px]
-                rounded-lg bg-cover bg-center opacity-0f transition-[background] duration-300"
+                className="hover-reveal opacity-0f pointer-events-none absolute left-0 top-0 -z-10 h-[320px]
+                w-[220px] rounded-lg bg-cover bg-center transition-[background] duration-300"
                 style={{
                     backgroundImage:
                         currentItem !== null
